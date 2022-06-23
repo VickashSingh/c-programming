@@ -1,0 +1,35 @@
+You are to produce a message storing application in C that enables users, if they
+desire, to store altered versions of the files that they provide to the application.
+The files will be stored in a specified location known by the application.
+Upon accessing the application, a user should be able to input the path to a file
+containing a message that they wish to store.
+The application will then present the user with 4 options:
+• Store the file unchanged
+• Censor the file before storing
+• Encrypt the file before storing
+• Decrypt a stored file*
+Store the file unchanged
+If the user chooses to store the file unchanged, the application should read the contents
+of the file and store it appropriately in the defined file system.
+Censor the file before storing
+If the user chooses to censor the file, the application should ask the user to enter a
+comma separated list of words that should be censored from the file.
+The program will implement an algorithm that redacts or censors the words provided
+from the text in the file. It should then read the contents of the file, redact the words if
+they appear in the input file and store the result appropriately in the defined file
+system.
+For example:
+Given the block of text below:
+The quick brown fox jumps over the lazy dog
+and the redactable set of words:
+the, jumps, lazy
+the output text stored should be
+*** quick brown fox ***** over *** **** dog
+Note
+- The number of stars in the redacted text must match the number of letters in
+the word that has been redacted.
+- Capitalization is ignored.
+- Only whole words that match one of the redacted words should be redacted.
+o Ignore words that are part of words e.g. jumpsuit should not be
+redacted given the word jumps.
+o Ignore hyphenated words and words with apostrophes. 
